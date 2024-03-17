@@ -1,0 +1,80 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monate Wines and Drinks</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+  <header>
+    <!-- Restoring the initial header content -->
+    <h1>Welcome to Monate Wines and Drinks</h1>
+    <p>making winederful memories!</p>
+    <!-- End of initial header content -->
+  </header>
+
+
+<!-- ... (your existing code) -->
+<nav>
+  <div class="off-screen-menu">
+  <ul>
+      <li><a href='/logout'>Logout</a></li>
+      <li><a href="{url_for{'history'}}">Order history</a></li>
+      <li><a href="check.html">Checkout</a></li>
+  </ul>
+  </div>
+
+  <div class="ham-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>  
+</nav>
+ 
+  <div id="cart-icon">
+    <a href="checkout.html"><img src="https://i.imgur.com/ZAh1v5l_d.jpg?maxwidth=520&shape=thumb&fidelity=high" alt="Shopping Cart"></a>
+    <span id="cart-count">0</span>
+  </div>
+
+  <section>
+    <h2>THIS PAGE IS STILL UNDER CONSTRUCTION!!!</h2>
+    <p>But you can still reach us...</p>
+    <div class= "social-icons"><a href="https://wa.me/+2348164642022" class="icon"><img src="https://i.imgur.com/cusEQIJ_d.jpg?maxwidth=520&shape=thumb&fidelity=high"></a>
+    <a href="https://www.instagram.com/monatewineanddrinks?igsh=ZnM3cDg0MjRpeW1p" class="icon"><img src="https://i.imgur.com/zYO9Sjl_d.jpg?maxwidth=520&shape=thumb&fidelity=high"></a>
+    <a href="https://www.facebook.com/omotoso.margaret.1" class="icon"><img src="https://i.imgur.com/yhWl7GU_d.jpg?maxwidth=520&shape=thumb&fidelity=high"></a>
+    </div>
+    <!-- Add more content as needed -->
+  </section>
+
+  <h3>ORDER HISTORY</h3>
+  <table class="table" id="history" border="1" cellpadding="5" cellspacing="0">
+
+        <tr id="tbh">
+            <th>PRODUCT ID</th>
+            <th>PRODUCT</th>
+            <th>QTY</th>
+            <th>PRICE</th>
+            <th rowspan="%">total</th>
+        </tr>
+        {% for row in rows%}
+        <tr>
+            <td>{{ row['id']}}</td>
+            <td>{{ row['product']}}</td>
+            <td>{{ row['quantity']}}</td>
+            <td>{{ row['price']}}</td>
+        </tr>
+        {% endfor %}
+
+        
+    </table>
+
+  <footer>
+    <p>&copy; 2024 Monate Wines and Drinks. All rights reserved.</p>
+  </footer>
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

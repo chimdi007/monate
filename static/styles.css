@@ -1,0 +1,232 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:white;
+    text-align:center;
+  }
+  
+  header {
+    background-image: url('https://i.imgur.com/U14ZfbR_d.jpg?maxwidth=520&shape=thumb&fidelity=high');
+    background-size: device-width; /* Adjust this value as needed */
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #21b651;
+    font-size: 2rem;
+}
+
+/*
+  
+  nav {
+    background-color: #444;
+    padding: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  */
+  section {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .wine-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  #cart-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  #cart-icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  
+  #cart-count {
+    background-color: #4caf50;
+    color: #ae2e2e;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+  
+  /* New styles for responsive navigation 
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .nav-menu {
+    display: block;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-menu.active {
+      display: block;
+    }
+  }
+/* styles.css * ... (your existing code) 
+.nav-menu {
+    display: none; /* Hide the nav by default 
+  }
+  
+  .menu-toggle {
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-menu.active {
+      display: block; /* Show the nav when it has the 'active' class *
+    }
+  
+    .menu-toggle.active {
+      display: none;  Hide the toggle button when nav is active 
+    }
+  */
+    
+  .social-icons{
+    display:flex;
+    justify-content: center;
+  }
+
+  .icon{
+    length:30px;
+    width: 30px;0px;
+    margin:0 8px;
+    border-radius:50%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .off-screen-menu {
+    background-color: rgb(118, 148, 179);
+    width: 100%;
+    height: 50vh;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    opacity:0.8;
+    transition: .3s ease;
+  }
+  
+  .off-screen-menu.active {
+    right: 0px;
+  }
+  
+  nav {
+    padding: 1rem;
+    display: flex;
+    background-color:rgba(178, 58, 14, 0.765);
+  }
+  
+  .ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+  }
+  
+  .ham-menu span {
+    height: 5px;
+    width: 100%;
+    background: rgb(18, 194, 80);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+  }
+  
+  .ham-menu span:nth-child(1) {
+    top: 25%;
+  }
+  
+  .ham-menu span:nth-child(3) {
+    top: 75%;
+  }
+  
+  .ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  
